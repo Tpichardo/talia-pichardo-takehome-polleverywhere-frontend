@@ -1,31 +1,33 @@
 import { Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import NavBar from "./components/navbar/NavBar";
 import Home from "./components/home/Home";
-import allRaffles from "./components/raffles/AllRaffles";
+import AllRaffles from "./components/raffles/AllRaffles";
 import AddNewRaffleForm from "./components/newRaffle/AddNewRaffleForm";
 
 // import "./App.css";
 
 function App() {
+	const queryClient = new QueryClient();
 	return (
-		<div>
+		<QueryClientProvider client={queryClient}>
 			<NavBar />
 			<Routes>
 				<Route
 					path="/"
-					element={Home}
+					element={<Home />}
 				/>
 				<Route
 					path="/raffles"
-					element={allRaffles}
+					element={<AllRaffles />}
 				/>
 				<Route
 					path="/raffles/new"
-					element={AddNewRaffleForm}
+					element={<AddNewRaffleForm />}
 				/>
 			</Routes>
-		</div>
+		</QueryClientProvider>
 	);
 }
 
