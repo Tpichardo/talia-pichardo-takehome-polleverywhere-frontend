@@ -1,0 +1,15 @@
+.hero {
+	background-color: #fe7a36;
+}
+.heroContainer {
+	display: flex;
+}
+
+.heroText {
+	align-self: center;
+	padding: 70px;
+}
+
+.heroImg {
+	margin-right: 30px;
+}
