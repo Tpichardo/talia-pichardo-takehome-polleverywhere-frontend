@@ -1,21 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import brandImg from "../../Assets/brandImg.png";
+import "./NavBar.css";
 
 const NavBar = () => {
 	return (
 		<Navbar>
 			<Container>
-				<Navbar.Brand href="#home">
-					<img
-						alt=""
-						src={brandImg}
-						width="45"
-						height="45"
-						className="d-inline-block align-top"
-					/>
-					Raffle
-				</Navbar.Brand>
+				<Link
+					className="brandLogo"
+					to="/">
+					<Navbar.Brand>
+						<img
+							alt="colorful ticket tumbler icon"
+							src={brandImg}
+							width="45"
+							height="45"
+							className="d-inline-block align-top"
+						/>
+						Raffle
+					</Navbar.Brand>
+				</Link>
 				<Nav className="d-flex">
 					<Nav.Link
 						as={NavLink}
