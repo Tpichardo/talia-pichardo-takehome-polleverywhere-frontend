@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import NavBar from "./components/navbar/NavBar";
 import Home from "./components/home/Home";
 import AllRaffles from "./components/raffles/AllRaffles";
-import AddNewRaffleForm from "./components/newRaffle/AddNewRaffleForm";
+import AddNewRaffle from "./components/newRaffle/AddNewRaffle";
 
 // import "./App.css";
 
@@ -24,7 +24,7 @@ function App() {
 				/>
 				<Route
 					path="/raffles/new"
-					element={<AddNewRaffleForm />}
+					element={<AddNewRaffle />}
 				/>
 			</Routes>
 		</QueryClientProvider>
