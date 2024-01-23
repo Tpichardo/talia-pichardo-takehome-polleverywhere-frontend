@@ -38,7 +38,9 @@ const AllRaffles = () => {
 					);
 					return (
 						<li key={raffle.id}>
-							<Card className="text-center">
+							<Card
+								border="info"
+								className="text-center">
 								<Card.Body>
 									<Card.Title>{raffle.raffle_name}'s Raffle</Card.Title>
 									<Card.Text>{formattedDate}</Card.Text>
