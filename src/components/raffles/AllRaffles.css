@@ -1,0 +1,14 @@
+.rafflesContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ul {
+	min-width: 85%;
+}
+
+li {
+	list-style: none;
+	margin-bottom: 25px;
+}
