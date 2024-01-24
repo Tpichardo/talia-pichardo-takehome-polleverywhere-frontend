@@ -18,7 +18,7 @@ const NewRaffleForm = () => {
 		mutationFn: AddNewRaffle,
 		onSuccess: (data) => {
 			queryClient.invalidateQueries({ queryKey: ["raffles"] });
-			navigate(`raffles/${data.id}`);
+			navigate(`/raffles/${data.id}`);
 		},
 	});
 
