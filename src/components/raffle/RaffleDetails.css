@@ -1,0 +1,10 @@
+.raffleDetailsContainer {
+	background-color: #dcbfff;
+	padding: 8%;
+}
+
+.btnContainer {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
