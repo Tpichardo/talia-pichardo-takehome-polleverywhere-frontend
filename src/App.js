@@ -5,11 +5,13 @@ import NavBar from "./components/navbar/NavBar";
 import Home from "./components/home/Home";
 import AllRaffles from "./components/raffles/AllRaffles";
 import NewRaffleForm from "./components/newRaffle/NewRaffleForm";
+import RaffleDetails from "./components/raffle/RaffleDetails";
 
 // import "./App.css";
 
 function App() {
 	const queryClient = new QueryClient();
+
 	return (
 		<QueryClientProvider client={queryClient}>
 			<NavBar />
@@ -25,6 +27,10 @@ function App() {
 				<Route
 					path="/raffles/new"
 					element={<NewRaffleForm />}
+				/>
+				<Route
+					path="/raffles/:id"
+					element={<RaffleDetails />}
 				/>
 			</Routes>
 		</QueryClientProvider>
