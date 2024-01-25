@@ -6,7 +6,7 @@ import { Card, Button } from "react-bootstrap";
 
 import participantIcon from "../../Assets/participantIcon.png";
 
-import getAllParticipants from "../../getAllParticipants";
+import getAllParticipants from "../functions/getAllParticipants";
 import "./Participants.css";
 
 const Participants = () => {

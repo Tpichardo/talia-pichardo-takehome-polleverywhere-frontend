@@ -3,12 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import { Form, Button } from "react-bootstrap";
 
-import getOneRaffle from "../../getOneRaffle";
-import postParticipant from "../../postParticipant";
+import getOneRaffle from "../functions/getOneRaffle";
+import addParticipant from "../functions/addParticipant";
 
-import "./RaffleDetails.css";
+import "./NewParticipantForm.css";
 
-const RaffleDetails = () => {
+const NewParticipantForm = () => {
 	const { id } = useParams();
 	let navigate = useNavigate();
 	const [raffle, setRaffle] = useState("");
@@ -32,7 +32,7 @@ const RaffleDetails = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		await postParticipant({ id, newParticipant });
+		await addParticipant({ id, newParticipant });
 		navigate(`/raffles/${id}/participants`);
 	};
 
@@ -100,4 +100,4 @@ const RaffleDetails = () => {
 	);
 };
 
-export default RaffleDetails;
+export default NewParticipantForm;

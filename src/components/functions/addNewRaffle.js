@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const AddNewRaffle = async (newRaffleData) => {
+const addNewRaffle = async (newRaffleData) => {
 	try {
 		const newRaffle = await axios.post(
 			"http://localhost:3001/raffles",
@@ -13,4 +13,4 @@ const AddNewRaffle = async (newRaffleData) => {
 	}
 };
 
-export default AddNewRaffle;
+export default addNewRaffle;
