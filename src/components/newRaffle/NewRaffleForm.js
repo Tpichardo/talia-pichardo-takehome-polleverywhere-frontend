@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 
-import AddNewRaffle from "../../AddNewRaffle";
+import addNewRaffle from "../functions/addNewRaffle";
 import "./NewRaffleForm.css";
 
 const NewRaffleForm = () => {
@@ -15,7 +15,7 @@ const NewRaffleForm = () => {
 
 	const queryClient = useQueryClient();
 	const mutation = useMutation({
-		mutationFn: AddNewRaffle,
+		mutationFn: addNewRaffle,
 		onSuccess: (data) => {
 			queryClient.invalidateQueries({ queryKey: ["raffles"] });
 			navigate(`/raffles/${data.id}`);

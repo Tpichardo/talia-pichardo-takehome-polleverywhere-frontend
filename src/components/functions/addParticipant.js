@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const postParticipant = async ({ id, newParticipant }) => {
+const addParticipant = async ({ id, newParticipant }) => {
 	try {
 		const participant = await axios.post(
 			`http://localhost:3001/raffles/${id}/participants`,
@@ -13,4 +13,4 @@ const postParticipant = async ({ id, newParticipant }) => {
 	}
 };
 
-export default postParticipant;
+export default addParticipant;

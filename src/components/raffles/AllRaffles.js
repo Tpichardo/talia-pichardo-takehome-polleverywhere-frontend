@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { Card, Button } from "react-bootstrap";
 
-import getAllRaffles from "../../getAllRaffles";
+import getAllRaffles from "../functions/getAllRaffles";
 import "./AllRaffles.css";
 
 const AllRaffles = () => {

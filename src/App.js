@@ -5,7 +5,7 @@ import NavBar from "./components/navbar/NavBar";
 import Home from "./components/home/Home";
 import AllRaffles from "./components/raffles/AllRaffles";
 import NewRaffleForm from "./components/newRaffle/NewRaffleForm";
-import RaffleDetails from "./components/raffle/RaffleDetails";
+import NewParticipantForm from "./components/newParticipant/NewParticipantForm";
 import Participants from "./components/participants/Participants";
 
 // import "./App.css";
@@ -31,7 +31,7 @@ function App() {
 				/>
 				<Route
 					path="/raffles/:id"
-					element={<RaffleDetails />}
+					element={<NewParticipantForm />}
 				/>
 				<Route
 					path="/raffles/:id/participants"
