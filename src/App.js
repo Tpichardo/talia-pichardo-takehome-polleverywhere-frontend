@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import AllRaffles from "./components/raffles/AllRaffles";
 import NewRaffleForm from "./components/newRaffle/NewRaffleForm";
 import RaffleDetails from "./components/raffle/RaffleDetails";
+import Participants from "./components/participants/Participants";
 
 // import "./App.css";
 
@@ -31,6 +32,10 @@ function App() {
 				<Route
 					path="/raffles/:id"
 					element={<RaffleDetails />}
+				/>
+				<Route
+					path="/raffles/:id/participants"
+					element={<Participants />}
 				/>
 			</Routes>
 		</QueryClientProvider>
