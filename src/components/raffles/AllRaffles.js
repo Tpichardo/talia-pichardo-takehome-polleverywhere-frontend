@@ -54,6 +54,13 @@ const AllRaffles = () => {
 									<Link to={`/raffles/${raffle.id}`}>
 										<Button variant="primary">Join Raffle</Button>
 									</Link>
+									<Link to={`/raffles/${raffle.id}/participants`}>
+										<Button
+											className="m-3"
+											variant="primary">
+											Paticipants
+										</Button>
+									</Link>
 								</Card.Body>
 							</Card>
 						</li>
