@@ -38,7 +38,7 @@ const NewParticipantForm = () => {
 
 	return (
 		<div className="raffleDetailsContainer">
-			<h1>Join {raffle.raffle_name}'s Raffle!</h1>
+			<h1>Join {raffle.raffle_name}!</h1>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group>
 					<Form.Label>First Name:</Form.Label>

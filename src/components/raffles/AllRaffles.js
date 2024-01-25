@@ -49,7 +49,7 @@ const AllRaffles = () => {
 								border="info"
 								className="text-center">
 								<Card.Body>
-									<Card.Title>{raffle.raffle_name}'s Raffle</Card.Title>
+									<Card.Title>{raffle.raffle_name}</Card.Title>
 									<Card.Text>{formattedDate}</Card.Text>
 									<Link to={`/raffles/${raffle.id}`}>
 										<Button variant="primary">Join Raffle</Button>
