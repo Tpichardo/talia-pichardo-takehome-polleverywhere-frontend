@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import { Form, Button } from "react-bootstrap";
 
@@ -10,6 +10,7 @@ import "./RaffleDetails.css";
 
 const RaffleDetails = () => {
 	const { id } = useParams();
+	let navigate = useNavigate();
 	const [raffle, setRaffle] = useState("");
 	const [newParticipant, setNewParticipant] = useState({
 		first_name: "",
@@ -29,9 +30,10 @@ const RaffleDetails = () => {
 		setNewParticipant({ ...newParticipant, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		postParticipant({ id, newParticipant });
+		await postParticipant({ id, newParticipant });
+		navigate(`/raffles/${id}/participants`);
 	};
 
 	return (
@@ -52,7 +54,7 @@ const RaffleDetails = () => {
 					<Form.Label>Last Name:</Form.Label>
 					<Form.Control
 						name="last_name"
-						value={newParticipant.first_lastname}
+						value={newParticipant.last_name}
 						required
 						onChange={handleChange}
 						className="mb-3"
